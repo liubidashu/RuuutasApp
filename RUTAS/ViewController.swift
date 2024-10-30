@@ -9,11 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+    @IBOutlet var nasButton: UIButton!
+    
+
+    @IBAction func nasButton(_ sender: Any) { let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "ViewController2")
+        self.present(viewController, animated: true, completion: nil)
     }
-
-
+    
 }
-
